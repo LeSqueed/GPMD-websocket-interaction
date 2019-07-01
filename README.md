@@ -26,6 +26,10 @@ This toggles between play and pause.
 
 This decreases the volume in steps of 5.
 
+```Send_Commmand.py volume decreaseVolume 50```
+
+This decreases the volume by 50%, it automatically stop at 0.
+
 For a documentation on what commands are possible you can take a look at this page:
 https://github.com/gmusic-utils/gmusic.js
 
