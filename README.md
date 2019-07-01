@@ -8,11 +8,13 @@ Outside of the default modules this makes use of "websockets" which you can inst
 
 ## How to set it up
 
-Make sure you have the unnofficial Google Play Music Desktop Player running for this process.
-We first need to get authorisation to send commands through the websocket interface, for this we are going to run Get_Token.py.
+Make sure you have the unofficial Google Play Music Desktop Player running for this process.
+We first need to get authorisation to send commands through the websocket interface, for this we are going to run the following command first. Make sure you do this in a CLI so you can input the code later on.
 
-After running Get_Token.py you should see that Google Play Music Desktop Player is showing a code, enter this code in the CLI when asked to and press enter. This should have created a new file called "key.json".
-Now you are ready to use the actual script to control your music.
+```Send_Command.py configure```
+
+After running this command you should see that Google Play Music Desktop Player is showing a code, enter this code in the CLI when asked to and press enter. This should have created a new file called "key.json".
+Now you are ready to use the actual script to control your music, this can now be done by sending specific commands and there is no further requirement to interact with it in the CLI.
 
 ## A few examples
 
