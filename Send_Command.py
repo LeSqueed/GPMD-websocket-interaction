@@ -73,14 +73,16 @@ def sendCommand():
                         "namespace": namespace,
                         "method": command
                 }
+                ws.send(json.dumps(wsCommand,ensure_ascii=True))
+                print("Send following request: {0}".format(json.dumps(wsCommand)))
         else:
                 wsCommand = {
                         "namespace": namespace,
                         "method": command,
                         "arguments": argument
                 }
-        ws.send(json.dumps(wsCommand,ensure_ascii=True).replace('"'+argument+'"',argument))
-        print("Send following request: {0}".format(json.dumps(wsCommand).replace('"'+argument+'"',argument)))
+                ws.send(json.dumps(wsCommand,ensure_ascii=True).replace('"'+argument+'"',argument))
+                print("Send following request: {0}".format(json.dumps(wsCommand).replace('"'+argument+'"',argument)))
         ws.close()
 
 #Check if the proper format was used to call the script.
