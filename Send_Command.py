@@ -77,10 +77,10 @@ def sendCommand():
                 wsCommand = {
                         "namespace": namespace,
                         "method": command,
-                        "arguments": "["+argument+"]"
+                        "arguments": argument
                 }
-        ws.send(json.dumps(wsCommand))
-        print("Send following request: "+json.dumps(wsCommand))
+        ws.send(json.dumps(wsCommand,ensure_ascii=True).replace('"'+argument+'"',argument))
+        print("Send following request: {0}".format(json.dumps(wsCommand).replace('"'+argument+'"',argument)))
         ws.close()
 
 #Check if the proper format was used to call the script.
@@ -99,7 +99,7 @@ else:
         namespace=sys.argv[1]
         command=sys.argv[2]
         if len(sys.argv) > 3:
-                argument=sys.argv[3]
+                argument="[{0}]".format(sys.argv[3])
 
 #Checking if the key.json file is present.      
 if not os.path.isfile(path+"key.json"):
