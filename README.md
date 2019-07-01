@@ -4,7 +4,7 @@ You can control the unnofficial Google Play Music Desktop Player through a CLI w
 
 ## Dependencies
 
-Outside of the default modules this makes use of "websockets" which you can install with "pip install websockets".
+Outside of the default modules this makes use of "websockets" which you can install with "pip install websocket-client".
 
 ## How to set it up
 
