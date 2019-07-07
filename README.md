@@ -9,11 +9,11 @@ Outside of the default modules this makes use of "websockets" which you can inst
 ## How to set it up
 
 Make sure you have the unofficial Google Play Music Desktop Player running for this process.
-We first need to get authorisation to send commands through the websocket interface, for this we are going to run the following command first. Make sure you do this in a CLI so you can input the code later on.
+To update the values in config.ini to correspond to what we need we execute the following command.
 
 ```Send_Command.py configure```
 
-After running this command you should see that Google Play Music Desktop Player is showing a code, enter this code in the CLI when asked to and press enter. This should have created a new file called "key.json".
+This will ask you for a few inputs. If you keep these inputs blank it will use the default values. After having entered the IP and Port of the websocket server it will ask for a key. This key will be shown in the Google Play Music Desktop Player, enter this code in the CLI when asked to and press enter.
 Now you are ready to use the actual script to control your music, this can now be done by sending specific commands and there is no further requirement to interact with it in the CLI.
 
 ## A few examples
@@ -26,9 +26,9 @@ This toggles between play and pause.
 
 This decreases the volume in steps of 5.
 
-```Send_Commmand.py volume decreaseVolume 50```
+```Send_Command.py volume setVolume 50```
 
-This decreases the volume by 50%, it automatically stop at 0.
+This sets the volume to 50%. 
 
 For a documentation on what commands are possible you can take a look at this page:
 https://github.com/gmusic-utils/gmusic.js
